@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import TestPod
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let date = Date()
+        let convertor = DateConvertor()
+        let convertedString = convertor.convertDateTo_ddMMMYYYY(date: date, separator: "-")
+        print("convertedString: \(convertedString)")
     }
 
     override func didReceiveMemoryWarning() {
